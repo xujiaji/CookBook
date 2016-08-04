@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/step_num"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:layout_margin="3dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+			android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+			android:maxLines="7"
+            android:text="把柠檬汁挤出用小碗盛着，放入调味料：鱼露、精盐、鸡精、白糖（多一些白糖）沾一点尝尝，汁不要太酸也不要太甜。" />
+    </LinearLayout>
+
+</FrameLayout>

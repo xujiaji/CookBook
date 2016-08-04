@@ -1,0 +1,4 @@
+include ':app', ':sample', ':library'
+project(':sample').projectDir = new File('SystemBarTint-master/sample')
+project(':library').projectDir = new File('SystemBarTint-master/library')
+include ':freshlibrary'

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jiaji.cookbook">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:name=".app.App"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:value="2e2934a498877481602fc01e8841be1d" android:name="BUG_HD_SDK_GENERAL_KEY" />
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".cookerys.ShowCookeryActivity">
+
+        </activity>
+        <activity android:name=".details.CookDetailsActivity">
+
+        </activity>
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".index.IndexActivity">
+        </activity>
+        <service android:name=".service.UpdateService"/>
+    </application>
+
+</manifest>

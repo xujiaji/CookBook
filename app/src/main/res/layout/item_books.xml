@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvLetter_item_books"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="A"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="@dimen/line_long"
+            android:layout_height="@dimen/bian_kuang"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/white" />
+
+        <com.jiaji.cookbook.view.MyGridView
+            android:id="@+id/show_books_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#00000000"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:listSelector="#00000000"
+            android:numColumns="4" />
+
+    </LinearLayout>
+</LinearLayout>

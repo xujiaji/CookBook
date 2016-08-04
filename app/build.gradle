@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.jiaji.cookbook"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.01"
+    }
+
+    signingConfigs {
+        key {
+            storeFile file("../xj.jks")
+            storePassword KEYSTORE_PASSWORD
+            keyAlias "cook"
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.key
+            minifyEnabled true
+            debuggable true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.hannesdorfmann.fragmentargs:annotation:3.0.0'
+    compile project(':freshlibrary')
+    compile 'im.fir:fir-sdk:latest.integration@aar'
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+        maven {
+            url "http://maven.bughd.com/public"
+        }
+    }
+}
